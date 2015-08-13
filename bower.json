@@ -1,0 +1,17 @@
+{
+  "name": "workaholic.js",
+  "version": "0.0.1",
+  "authors": [
+    "genichiro.sugawara <genichiro.sugawara@torchlight.co.jp>"
+  ],
+  "description": "worker thread pattern for javascript",
+  "main": "workaholic.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+    "env": {
+        "node" : true,
+        "browser" : true
+    },
+    "parser": "babel-eslint",
+    "rules": {
+        "block-scoped-var": 2,
+        "curly": 0,
+        "default-case": 2,
+        "no-div-regex": 2,
+        "no-else-return": 2,
+        "no-eq-null": 2,
+        "no-eval": 0,
+        "no-floating-decimal": 2,
+        "no-multi-spaces": [2, {"exceptions": {"Property": true, "ImportDeclaration": true, "VariableDeclarator": true, "AssignmentExpression": true}}],
+        "no-self-compare": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": [2, {"vars": "all", "args": "none"}],
+        "strict" : 0,
+        "quotes": [2, "single"],
+        "wrap-iife": [2, "inside"]
+    }
+}

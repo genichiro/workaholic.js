@@ -1,0 +1,27 @@
+{
+  "name": "workaholic.js",
+  "version": "0.0.0",
+  "description": "worker thread pattern for javascript",
+  "main": "workaholic.js",
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^5.6.14",
+    "babel-eslint": "^4.0.5",
+    "babelify": "^6.1.3",
+    "browserify": "^11.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^0.15.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
