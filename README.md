@@ -1,11 +1,14 @@
-workaholic.js
+workaholic.js [![Bower version](https://badge.fury.io/bo/workaholic.js.svg)](http://badge.fury.io/bo/workaholic.js)
 ===
 
 ## Overview
 _workaholic.js_ is multi-threading library for Javascript.
 it employs a worker thread pattern.
 
-### Installation and Usage
+### Installation
+```
+$ bower install --save workaholic.js
+```
 ```html
 <script type="text/javascript" src="./workaholic.js"></script>
 ```
