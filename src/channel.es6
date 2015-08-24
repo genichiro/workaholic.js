@@ -50,10 +50,10 @@ module.exports = (function() {
 
         execute() {
             if (arguments.length === 0 || typeof arguments[arguments.length - 1] !== 'function') {
-                throw {
+                throw new Error({
                     name: 'run "execute" error',
                     message: 'last argument is not "function"'
-                };
+                });
             }
             let fn = arguments[arguments.length - 1];
             let fnString = FunctionUtil.toString(fn);
