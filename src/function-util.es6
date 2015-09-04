@@ -1,7 +1,8 @@
-module.exports = (function() {
-    let createObjectURL = window.createObjectURL || window.createObjectURL;
+module.exports = (function(global) {
+    let Blob = require('blob');
+    let createObjectURL = global.createObjectURL || global.createBlobURL;
     if (!createObjectURL) {
-        let URL = window.URL || window.webkitURL;
+        let URL = global.URL || global.webkitURL;
         if (URL) {
             createObjectURL = URL.createObjectURL;
         } else {
@@ -11,7 +12,6 @@ module.exports = (function() {
             });
         }
     }
-    let BlobBuilder = window.BlobBuilder || window.WebKitBlobBuilder || window.MozBlobBuilder || window.MSBlobBuilder;
 
     class FunctionUtil {
         static toString(fn) {
@@ -20,14 +20,7 @@ module.exports = (function() {
 
         static toBlob(fn) {
             let str = FunctionUtil.toString(fn);
-            if (typeof window.Blob === 'function') {
-                return createObjectURL(new window.Blob([str], {type: 'text/javascript'}));
-            } else if (typeof BlobBuilder === 'function') {
-                let blobBuilder = new BlobBuilder();
-                blobBuilder.append(str);
-                return createObjectURL(blobBuilder.getBlob());
-            }
-            return 'data:text/javascript;charset=utf-8,' + encodeURI(str);
+            return createObjectURL(new Blob([str], {type: 'text/javascript'}));
         }
 
         static getArgumentNames(fn) {
@@ -37,4 +30,4 @@ module.exports = (function() {
         }
     }
     return FunctionUtil;
-})();
+})((this || 0).self || global);
